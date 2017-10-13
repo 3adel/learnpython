@@ -1,6 +1,6 @@
 #assigning 10 to types of people
 types_of_people = 10
-#assigning a formatteds tring to x
+#assigning a formatteds string to x
 x = f"There are {types_of_people} types of people."
 
 #assign "binary" to binary
@@ -23,7 +23,7 @@ print(f"I said: {x}")
 print(f"I also said: {y}")
 
 #set my evaluation of the joke
-hilarious = False
+hilarious = True
 
 #create a formatted st
 joke_evaluation = "Isn't that joke so funny? {}" #{} used in loops to format
