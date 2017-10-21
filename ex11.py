@@ -15,12 +15,6 @@ print("What's your age?", end=' ')
 age = input("--->")
 
 #3 ways to do the same thing:
-print("Your name is " + age)
-print(f"Your age is {age}")
-print("Your age is {}".format(age))
-
-
-
-
-       
-
+print("Your name is " + age) #string concatenation
+print(f"Your age is {age}") #formatted string
+print("Your age is {}".format(age)) #.format
