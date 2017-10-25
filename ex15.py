@@ -20,3 +20,4 @@ txt_again = open(file_again) #open the file again
 
 print(txt_again.read()) #read the file, then print it.
 
+#You can open files from the python shell: >>> open("ex3.py").read()
