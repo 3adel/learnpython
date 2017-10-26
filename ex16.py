@@ -38,5 +38,7 @@ target = open(filename, 'r')
 print(">>>>>>Content of file: \n",target.read())
 
 
+print(target.readline())
+
 target.close()
 
