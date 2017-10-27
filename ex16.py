@@ -31,7 +31,15 @@ target.seek(0)
 print(">>>>>>Content of file: \n",target.read())
 
 target.seek(0)
-print(target.readline())
+print("Reading line >",target.readline())
+print("Reading line >",target.readline())
+
+
+#let's truncate the file
+target = open(filename, 'r+')
+target.truncate()
+print("Content after truncating: ",target.readline())
+
 
 target.close()
 
