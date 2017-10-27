@@ -31,9 +31,5 @@ target.close()
 print("Now let's read the file:")
 target = open(filename, 'r')
 print(">>>>>>Content of file: \n",target.read())
-
-for line in target.readline():
-    print(line)
-
 target.close()
 
