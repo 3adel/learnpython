@@ -25,12 +25,15 @@ print("I'm going to write these to the file.")
 target.write(line1 + "\n" + line2 + "\n" + line3 + "\n")
 
 print("And finally, we close it.")
-#target.close()
-
 
 print("Now let's read the file:")
 target.seek(0)
-#target = open(filename, 'r')
 print(">>>>>>Content of file: \n",target.read())
+
+target.seek(0)
+print(target.readline())
+
 target.close()
+
+
 
