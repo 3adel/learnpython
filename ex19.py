@@ -28,3 +28,15 @@ cheese_and_crackers(10 + 20, 5 + 6)
 #call the function with some math that includes global variables
 print("And we can combine the two, variables and math:")
 cheese_and_crackers(amount_of_cheese + 10, amount_of_crackers + 1000)
+
+#solving exercise 3. I will make a function that will reveive first and last name, then spits out the full name.
+
+def fullNameCreator(firstName, initial, lastName):
+    print(f"Your full name is {firstName} {initial} {lastName}")
+    return (firstName + " " + initial + " " + lastName)
+
+fullNameCreator("Adel", 'A', "Shehadeh")
+print(f"Calling a function: {fullNameCreator('Adel', 'A', 'Shehadeh')}")
+
+#now calling the function with an input from the user
+fullNameCreator(input("Enter first name: > "), input("Enter your initial: > "), input("Enter last name: > "))
