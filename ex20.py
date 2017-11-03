@@ -13,26 +13,33 @@ def rewind(f):
     f.seek(0)
 #this function takes the line number and the file object as arguments, then prints the given line number and the content of the file at that specific line   
 def print_a_line(line_count, f):
+    print(">>>> Passed line count is:", line_count)
     print(line_count, f.readline())
 
+#open the file and store the file object in the variable current_file
 current_file = open(input_file)
 
 print("First let's print the whole file:\n")
 
+#invoke the print_all function, passing a file object
 print_all(current_file)
 
 print("Now  let's rewind, kind of like a tape.")
 
+#invoke the rewind function
 rewind(current_file)
 
 print("Let's print three lines:")
 
+#update the value of current file
 current_line = 1
 print_a_line(current_line, current_file)
 
+#update the value of current file
 current_line = current_line + 1
 print_a_line(current_line, current_file)
 
+#update the value of current file
 current_line = current_line + 1
 print_a_line(current_line, current_file)
 
