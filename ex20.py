@@ -6,11 +6,17 @@ script, input_file = argv
 
 #this function takes a file object and prints its content to the console
 def print_all(f):
+    print(">>>> Print all: ", f)
     print(f.read())
+    print("<<<< Print all: ", f)
+
 
 #this fucntion takes a file object and moves the cursor to its beginning
 def rewind(f):
+    print(">>>> Print all: ", f)
     f.seek(0)
+    print("<<<< Print all: ", f)
+
 #this function takes the line number and the file object as arguments, then prints the given line number and the content of the file at that specific line
 def print_a_line(line_count, f):
     print(">>>> Passed line count is:", line_count)
