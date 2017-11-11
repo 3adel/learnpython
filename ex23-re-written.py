@@ -2,7 +2,7 @@ from sys import argv
 
 #you need the file name, the encoding and error handling as parameters
 
-script_name, file_encoding, error_handling =  argv
+script_name, file_name, file_encoding, error_handling =  argv
 
 # recursive function to scan the file line by line
 def lineScanner(file_Object,file_encoding, error_handling):
@@ -20,7 +20,7 @@ def printLine(line, lineEncoding, error):
 
 
 
-file_Object = open("languages.txt", encoding = "utf-8")
+file_Object = open(file_name, encoding = "utf-8")
 #file_text = file_Object.read()
 
 #call the main function now
