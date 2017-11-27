@@ -38,5 +38,5 @@ start_point = start_point / 10
 
 print("We can also do that this way:")
 formula = secret_formula(start_point)
-# this is an easy way to apply a list to a forma  string
+# this is an easy way to apply a list to a forma  string. We use the asterisk as a way to indicate that the argument contains a tuple
 print("We'd have {} beans, {} jars and {} crates.".format(*formula))
