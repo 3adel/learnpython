@@ -21,8 +21,8 @@ def sort_sentence(sentence):
     #print(">>>> sentence passed: ", sentence)
     """Takes in a full sentence and returns the sorted words."""
     words = break_words(sentence)
-    #print(">>>> sentence broken: ", words)
-    #print(">>>> sentence sorted: ", sort_words(words))
+    print(">>>> sentence broken: ", words)
+    print(">>>> sentence sorted: ", sort_words(words))
     return sort_words(words)
 
 def print_first_and_last(sentence):
@@ -36,4 +36,3 @@ def print_first_and_last_sorted(sentence):
     words = sort_sentence(sentence)
     print_first_word(words)
     print_last_word(words)
-    
