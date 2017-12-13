@@ -27,3 +27,7 @@ if people <= dogs:
 
 if people == dogs:
     print("People are dogs.")
+
+
+if not not True and True:
+    print("True and False")
