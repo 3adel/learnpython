@@ -17,4 +17,7 @@ elif trucks < cars:
 else:
     print("We still can't decide.")
 
-if people 
+if people > trucks:
+    print("Alright, let's just take the trucks.")
+else:
+    print("Fine, let's stay home then.")
