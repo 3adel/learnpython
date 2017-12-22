@@ -1,10 +1,11 @@
-people = 30
-cars = 40
+people = 10
+cars = 1000
 trucks = 15
 
 
-if cars > people:
+if not (cars > people or cars == people):
     print("We should take the cars.")
+#elif checks the previous condition, and if it's false, executes the following statement
 elif cars < people:
     print("We should not take the cars.")
 else:
