@@ -1,4 +1,4 @@
-print("""You enter a dark room with two doors. Do you go through door #1 or door #2?""")
+print("""You enter a dark room with two doors. Do you go through door #1 or door #2 or door #3?""")
 
 door = input("> ")
 
@@ -19,20 +19,23 @@ if door == "1":
          print(f"Well, doing {bear} is probably better.")
          print("Bear runs away.")
 
-    elif door =="2":
-        print("You stare into the endless abyss at Cthulhu's retina.")
-        print("1. Blueberries.")
-        print("2. Yellow jacket clothespins.")
-        print("3. Understanding revolvers yelling melodies.")
+elif door == "2":
+    print("You stare into the endless abyss at Cthulhu's retina.")
+    print("1. Blueberries.")
+    print("2. Yellow jacket clothespins.")
+    print("3. Understanding revolvers yelling melodies.")
 
-        insanity = input("> ")
+    insanity = input("> ")
 
-        if insanity == "1" or insanity == "2":
-            print("Your body survives powered by a mind of jello.")
-            print("Good job!")
-        else:
-            print("The insanity rots your eyes into a pool of muck.")
-            print("Good job!")
-
+    if insanity == "1" or insanity == "2":
+        print("Your body survives powered by a mind of jello.")
+        print("Good job!")
     else:
-        print("You stubmle around and fall on a knife and die. Good job!")
+        print("The insanity rots your eyes into a pool of muck.")
+        print("Good job!")
+
+elif door == "3":
+    print("Get the hell out of there!")
+
+else:
+        print("You stumble around and fall on a knife and die. Good job!")
