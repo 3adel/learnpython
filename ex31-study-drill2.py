@@ -3,25 +3,29 @@ pronoun = input("->")
 print("Enter the case:")
 case = input("->")
 
-if pronoun == "I":
-    if case == "nom":
-        print("ich")
-    if case == "akk":
-        print("mich")
-    elif case == "dat":
-        print("mir")
+def casePronoun(pronoun, case):
+    if pronoun == "I" or "i":
+        if case == "nom":
+            return "ich"
+        elif case == "akk":
+            return "mich"
+        elif case == "dat":
+            return "mir"
+        else:
+            return "Invalid case Entered!"
+    elif pronoun == "you":
+        if case == "nom":
+            return "du"
+        elif case == "akk":
+            return "dich"
+        elif case == "dat":
+            return "dir"
+        else:
+            return "Invalid case Entered!"
     else:
-        print("Wrong case entry!")
+        print("no")
 
-elif pronoun == "You":
-    if case == "nom":
-        print("du")
-    if case == "akk":
-        print("dich")
-    elif case == "dat":
-        print("dir")
-    else:
-        print("Wrong case entry!")
+    return "Unknown"
 
-else:
-     print("Wrong pronoun entry!")
+
+print("The conjugation of [{}] in the [{}] case is [{}]".format(pronoun, case, casePronoun(pronoun, case)))
