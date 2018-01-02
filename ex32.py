@@ -20,7 +20,7 @@ elements = []
 
 # then use the range function to do 0 to 5 counts
 # you can use range(start, stop, increment). Example: range(0, 6, 2):
-for i in range(0, 6, 2):
+for i in range(0, 6, 1): # or elements = range(0,6)
     print(f"Adding {i} to the list")
     # append is a function that lists understand
     elements.append(i)
