@@ -1,10 +1,11 @@
-def myWhileLoop(myNumber):
+def myWhileLoop(myNumber, increment):
     numbers = []
     i = 0
     while i < myNumber:
+        print(">>>> While is running: ", i)
         numbers.append(i)
-        i = i + 1
+        i = i + increment
     return numbers
 
-i = int(input("Enter number: "))
-print(repr(myWhileLoop(i)))
+i, myIncrement = int(input("Enter number: ")), int(input("Enter increment: "))
+print(repr(myWhileLoop(i, myIncrement)))
