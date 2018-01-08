@@ -1,16 +1,10 @@
-i = 0
-numbers = []
+def myWhileLoop(myNumber):
+    numbers = []
+    i = 0
+    while i < myNumber:
+        numbers.append(i)
+        i = i + 1
+    return numbers
 
-while i < 6:
-    print(f"At the top i is {i}")
-    numbers.append(i)
-
-    i = i + 1
-    print("Numbers now: ", numbers)
-    print(f"At the bottom i is {i}")
-
-
-print("The numbers: ")
-
-for num in numbers:
-    print(num)
+i = int(input("Enter number: "))
+print(repr(myWhileLoop(i)))
