@@ -1,12 +1,13 @@
-animals = ['Bär', 'python3.6', 'Pfau', 'das Känguru', 'der Wal', "der Schnabeltier"]
 
-#remember cardinal - ordinal = 1
+text = """Angesichts der Spannungen auf der koreanischen Halbinsel haben Nord- und Südkorea sich auf weitere hochrangige Gespräche verständigt. In einer gemeinsamen Mitteilung erklärten die Nachbarländer nach ihrem ersten offiziellen Treffen seit mehr als zwei Jahren, sie wollten die "aktuellen militärischen Spannungen entschärfen" und dazu den wiederaufgenommenen Dialog fortführen.
+"""
 
-print(animals[1])
-print(animals[2])
-print(animals[0])
-print(animals[3])
-print(animals[4])
-print(animals[2])
-print(animals[5])
-print(animals[4])
+
+splittedText = text.split(' ')
+splittedTextNoDots = []
+
+for word in splittedText:
+    splittedTextNoDots.append(word.replace('.',''))
+
+
+print(splittedTextNoDots)
