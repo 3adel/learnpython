@@ -1,11 +1,13 @@
-i = """Die Umgangsformen in der Schweiz, Österreich und
-Deutschland sind im Großen und Ganzen ähnlich. Zur
-Begrüßung ist es üblich, die Hand zu geben. Wenn man
-jemanden gut kennt, ist auch eine Umarmung möglich.
-In der jüngeren Generation ist es modern geworden,
-Begrüßungsküsse zu geben. Das ist aber nur im
-Privatleben möglich, im Geschäftsleben ist körperliche
-Nähe tabu."""
+i = """Daniel ist in letzter Zeit ziemlich schlecht drauf.
+Ich habe das Gefühl, dass er Probleme auf der
+Arbeit hat.
+Das stimmt, er hat Angst um seinen Arbeitsplatz.
+Außerdem geht ihm sein Chef ganz schön auf die
+Nerven.
+Was ist denn mit Paul los? Ich habe ihn lange nicht
+so fröhlich gesehen.
+Er fliegt morgen für drei Wochen auf die Malediven.
+Kein Wunder, dass er so gut drauf ist!"""
 
-j = i.rstrip()
+j = i.replace('\n', ' ')
 print(j)
