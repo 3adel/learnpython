@@ -4,7 +4,7 @@ def myWhileLoop(myNumber, increment):
         print(">>>> While is running: ", i)
         numbers.append(i)
         print(">>>> i after increment: ", i)
-    return numbers 
+    return numbers
 
 i, myIncrement = int(input("Enter number: ")), int(input("Enter increment: "))
 print(repr(myWhileLoop(i, myIncrement)))
