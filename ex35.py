@@ -2,9 +2,10 @@ from sys import exit
 
 def gold_room():
     print("This room is full of gold. How much do you take?")
-
     choice = input("> ")
-    if "0" in choice or "1" in choice:
+
+
+    if choice.isdigit():
         how_much = int(choice)
     else:
         dead("Man, learn to type a number.")
@@ -72,4 +73,4 @@ def start():
         cthulhu_room()
     else: dead("You stumble around the room until you starve.")
 
-start()        
+start()
