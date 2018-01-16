@@ -2,12 +2,12 @@ from sys import exit
 
 def gold_room():
     print("This room is full of gold. How much do you take?")
+
     choice = input("> ")
 
-
-    if choice.isdigit():
+    try:
         how_much = int(choice)
-    else:
+    except:
         dead("Man, learn to type a number.")
 
     if how_much < 50:
