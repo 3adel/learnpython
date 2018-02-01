@@ -16,12 +16,32 @@ def displayInto():
 def choosePath():
     path = ""
     #input validation trick
-    while path !=1 and path != 2:
+    while path != "1" and path !="2":
         try:
-            path = int(input("Which path will you shooose? (1 or 2) "))
+            path = input("Which path will you shooose? (1 or 2) ")
         except:
             print("Learn to type a number!")
     return path
 
-displayInto()
-choosePath()
+def checkPath(chosenPath):
+    print("You head down the path")
+    time.sleep(2)
+    print("Approaching ...")
+    time.sleep(2)
+    print("Oh ... somethig is happening ...")
+    time.sleep(2)
+
+    correctPath = str(random.randint(1,2))
+
+    if choosePath == correctPath:
+        print("That tingling was just admirations of citizens")
+    else:
+        print("You're fucked")
+
+playAgain = "yes"
+while playAgain == "yes" or playAgain == "y":
+    displayInto()
+    choosePath()
+    choice = choosePath
+    checkPath(choice)
+    playAgain = input("Do you want to play again?")
