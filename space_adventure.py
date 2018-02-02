@@ -9,39 +9,37 @@ print("Hello")
 time.sleep(3)
 print("There")
 
-def displayInto():
+def displayIntro():
     print("This is an intro to the game.")
-    print()
 
 def choosePath():
     path = ""
+
     #input validation trick
-    while path != "1" and path !="2":
-        try:
-            path = input("Which path will you shooose? (1 or 2) ")
-        except:
-            print("Learn to type a number!")
+    while path != '1' and path != '2':
+        path = input("Which path will you shooose? (1 or 2) ")
     return path
 
 def checkPath(chosenPath):
-    print("You head down the path")
+    print("You head down the path...")
     time.sleep(2)
-    print("Approaching ...")
+    print("Approaching...")
     time.sleep(2)
-    print("Oh ... somethig is happening ...")
+    print("Oh, somethig is happening ...")
     time.sleep(2)
 
     correctPath = str(random.randint(1,2))
+    print(">>>> correct path is", correctPath)
 
-    if choosePath == correctPath:
+    if chosenPath == correctPath:
         print("That tingling was just admirations of citizens")
     else:
         print("You're fucked")
 
 playAgain = "yes"
+
 while playAgain == "yes" or playAgain == "y":
-    displayInto()
-    choosePath()
-    choice = choosePath
+    displayIntro()
+    choice = choosePath()
     checkPath(choice)
     playAgain = input("Do you want to play again?")
