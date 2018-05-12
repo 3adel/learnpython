@@ -1,6 +1,6 @@
-squares = []
-for x in range(10):
-    squares.append(x ** 2)
+squares = list(map(lambda x: x**2, range(10)))
+print(squares)
 
-print(f"squares array is {squares}")
-print(f"x is {x}")
+#or equivvalently:
+squares2 = [x**2 for x in range(10)]
+print(squares2)
