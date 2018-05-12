@@ -1,18 +1,22 @@
-#example of using list comprehensions to combine two lists
+#more examples to lists comprehension
 
-#traditional method:
-combs = []
-for x in [1,2,3]:
-    for y in [3,1,4]:
-        if x != y:
-            combs.append((x,y))
+vec = [-4, -2, 0, 2, 4]
+vecDoubled = [x*2 for x in vec]
+print(">>> vec", vec)
+print(">>> vecDoubled", vecDoubled)
 
-print(">>> x",x)
-print(">>> y", y)
-print("Comb1",combs)
+#filter negative numbers
+vecFiltered = [x for x in vec if x >= 0]
+print(">>> vecFiltered", vecFiltered)
 
-#with list comprehensions
-combs2 = [(m,z) for m in [1,2,3] for z in [3,1,4] if m != z]
-print(">>> m",x)
-print(">>> z", y)
-print("Comb2",combs2)
+#apply functions to all the elements
+vecFunctioned = [abs(x) for x in vec]
+print(">>> vecFunctioned",vecFunctioned)
+
+#apply a method to each element
+freshFruit = ['     banana',"   loganberry","passion fruit","apples   ","oranges"]
+
+print(">>>> freshFruit", freshFruit)
+
+freshFruitCleaned = [fruit.strip() for fruit in freshFruit]
+print(">>> freshFruitCleaned", freshFruitCleaned)
