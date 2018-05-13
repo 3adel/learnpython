@@ -20,3 +20,7 @@ print(">>>> freshFruit", freshFruit)
 
 freshFruitCleaned = [fruit.strip() for fruit in freshFruit]
 print(">>> freshFruitCleaned", freshFruitCleaned)
+
+#create a list of 2-tuple like (number, square)
+squaresTuple = [(x,x**2) for x in range(500)]
+print("squaresTuple", squaresTuple)
