@@ -1,16 +1,4 @@
-regions = {
-    'North': 'N',
-    'South': 'S',
-    'East': 'E',
-    'West': 'W',
-}
+#the dict() contructor builds a dictionary from a list of key-value pairs
 
-cities = {
-    'N':'Irbid',
-    'S':'Ma\'an',
-    'E':'Azraq',
-    'W':'Shouneh'
-
-}
-
-print(f"Region {regions['North']} has city {cities[regions['North']]}")
+myDic = dict([('Name','Adel'),('Age','38')])
+print(myDic)
