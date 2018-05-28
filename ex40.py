@@ -1,8 +1,16 @@
-# to create a class that resembles the module behaviour:
+class Song(object):
+    def __init__(self, lyrics):
+        self.lyrics = lyrics
 
-class MyStuff(object):
-    def __init__(self):
-        self.tangerine = "And now a thousand years between"
+    def sing_me_a_song(self):
+        for line in self.lyrics:
+            print(line)
 
-    def apple(self):
-        print("I AM CLASSY APPLES!")
+happy_bday = Song(["Happy birthday to you",
+                   "I don't want to get sued",
+                   "So I'll stop right there"])
+
+bulls_on_parade = Song(["They rally round the family","With pocket full of shells"])
+
+happy_bday.sing_me_a_song()
+bulls_on_parade.sing_me_a_song()
