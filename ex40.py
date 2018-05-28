@@ -14,3 +14,6 @@ bulls_on_parade = Song(["They rally round the family","With pocket full of shell
 
 happy_bday.sing_me_a_song()
 bulls_on_parade.sing_me_a_song()
+
+enter_sand_man = Song(["Say your prayer little one", "Don't forget my son", "To include everyone"])
+enter_sand_man.sing_me_a_song()
