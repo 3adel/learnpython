@@ -1,10 +1,11 @@
 class Song(object):
     def __init__(self, lyrics):
         self.lyrics = lyrics
-
+    xx= "xxxxxxxxxx"
     def sing_me_a_song(self):
         for line in self.lyrics:
             print(line)
+
 
 hSong = ["Happy birthday to you",
                    "I don't want to get sued",
