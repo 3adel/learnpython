@@ -27,16 +27,16 @@ class Employee:
 		#self.pay = int(self.pay * Employee.raise_amount)
 
 #When we create objects, self is passed automatically. Also the init method will be run automatically
-print(">>>Number of employees before =", Employee.number_of_employees)
+print(">>> Number of employees before =", Employee.number_of_employees)
 
 emp_1 = Employee('Corey', 'Schafer', 5000)
 emp_2 = Employee('Test', 'User', 6000)
 
-print(">>>Number of employees after =", Employee.number_of_employees)
+print(">>> Number of employees after =", Employee.number_of_employees)
 
-print(">>>Employee 1 pay before raise =",emp_1.pay)
+print(">>> Employee 1 pay before raise =",emp_1.pay)
 emp_1.apply_raise()
-print(">>>Employee 1 pay after raise =",emp_1.pay)
+print(">>> Employee 1 pay after raise =",emp_1.pay)
 
 
 #how to show class or instance namespaces
