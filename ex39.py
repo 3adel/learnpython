@@ -1,3 +1,16 @@
-#iterate on key-value at the same time using the items() method
-for myKey, myValue in myDic.items():
-    print("They key value pair is", myKey, myValue)
+#to loop over a sequence in reverse
+
+seq1 = ['name', 'age', 'height']
+
+for i in reversed(seq1):
+    print(i)
+
+
+#in traditional methods
+
+for k in seq1[::-1]:
+    print(k)
+
+#get the index:
+for i in (seq1[::-1]):
+    print(i, seq1.index(i))
