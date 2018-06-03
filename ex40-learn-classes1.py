@@ -1,8 +1,8 @@
 class Employee:  
 	
 	#class variables
-	raise_amount = 1.04
 	number_of_employees = 0
+	raise_amount = 1.04
 
 	def __init__(self, first, last, pay):
 		self.first = first
@@ -25,23 +25,38 @@ class Employee:
 
 		# you can use the class instead of self if you're absolutely sure that the raise won't change at all form any eimployee
 		#self.pay = int(self.pay * Employee.raise_amount)
+	
+
+	#class methods using a decorator. In this method, we take the class as an
+	#rgument
+	@classmethod
+	def set_raise_amount(cls, amount):
+		cls.raise_amount = amount
+
 
 #When we create objects, self is passed automatically. Also the init method will be run automatically
 print(">>> Number of employees before =", Employee.number_of_employees)
 
-emp_1 = Employee('Corey', 'Schafer', 5000)
-emp_2 = Employee('Test', 'User', 6000)
-
-print(">>> Number of employees after =", Employee.number_of_employees)
-
-print(">>> Employee 1 pay before raise =",emp_1.pay)
-emp_1.apply_raise()
-print(">>> Employee 1 pay after raise =",emp_1.pay)
+emp_1 = Employee('Corey', 'Schafer', 50000)
+emp_2 = Employee('Test', 'User', 60000)
 
 
-#how to show class or instance namespaces
-print("\n>>> Employee class namespace:\n", Employee.__dict__)
-print("\n\n>>> Emp1 instance namespace:\n", emp_1.__dict__)
+#raise amount before calling the class method
+print(Employee.raise_amount)
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
+
+#calling the class method
+Employee.set_raise_amount(1.05)
+
+#you can also run class methods from instances, but nobody does it really
+#emp_1..set_raise_amount(1.05)
+
+#raise amount before calling the class method
+print(Employee.raise_amount)
+print(emp_1.raise_amount)
+print(emp_2.raise_amount)
+
 
 
 
