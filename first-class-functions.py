@@ -2,15 +2,19 @@
 # A function is described as first class when it's treated in the realm of the prgramming languag as first class citizen. Meaning it can be returned, passed as an argument or assigned to a variable
 
 
-def logger(msg):
+def html_tag(tag):
 
-	def log_message():
-		print('Log:', msg)
+	def wrap_text(msg):
+		print('<{0}>{1}</{0}>'.format(tag, msg))
 
-	return log_message
+	return wrap_text
 
-log_hi = logger('Hi')
-print(">>> log _hi is actually a function now: ",log_hi)
+print_h1 = html_tag('h1')
+print(">>> wrap_text unction is waiting to be execnted:",print_h1)
 
-#now we can execute log_hi. Notice how log_hi remembered our messag passed to it, i.e., "Hi"
-log_hi()
+print_h1('Test Headline')
+print_h1('Another line')
+
+
+print_p = html_tag('p')
+print_p('A paragraph test')
