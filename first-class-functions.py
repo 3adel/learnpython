@@ -3,15 +3,21 @@
 
 
 def square(x):
-	return x * x
+	return x ** 2
 
-#you can assign a function to a variable
-f = square
+def cube(x):
+	return x ** 3
 
-#same thing
-print(square)
-print(f)
+# A sample map function. It takes a function as an argument
+def my_map(func, arg_list):
+	result = []
+	for i in arg_list:
+		result.append(func(i))
+	return result
 
-#you can also treat the variable as a function now
-print(square(5))
+#note that when we're passing square function as an argument, we don't include the parenthesis. The reason is that we are not execution the function square, but rather we're just passing it to another function.
+squares = my_map(square, [1, 2, 3, 4, 5])
+print(squares)
 
+cubes = my_map(cube, [1, 2, 3, 4, 5])
+print(cubes)
