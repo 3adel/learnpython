@@ -1,20 +1,14 @@
-def outer_func(msg):
-	#the variable message is so called free variable
-	message = msg
+def html_tag(tag):
+	def wrap_text(msg):
+		print('<' + tag + '>' + msg + '</' + tag + '>')
 
-	#a closure in simple terms is an inner function that remembers and has access to the
-	#variables in local scope in which it was created
-	def inner_func():
-		print (message)
+	return wrap_text
 
-	#here we return the function without executing it
-	return inner_func
-	
-	#here, we return the function executed
-	#return inner_func()
+html_tag('h1')('My name is adel')
 
-hi_func =  outer_func('Hi')
-hello_func = outer_func('Hello')
+#or
 
-hi_func()
-hello_func()
+print_h1 = html_tag('h1')
+print_h1('This is my message')
+
+html_tag('b')("This is such a long text This is such a long textThis is such a long textThis is such a long textThis is such a long textThis is such a long textThis is such a long textThis is such a long textThis is such a long textThis is such a long text")
