@@ -1,14 +1,27 @@
-def html_tag(tag):
-	def wrap_text(msg):
-		print('<' + tag + '>' + msg + '</' + tag + '>')
+import logging 
+logging.basicConfig(filename='mylog.log', level=logging.INFO)
 
-	return wrap_text
+def logger(func):
+	def log_func(*args):
+		logging.info('Running "{}" with arguments {}'.format(func.__name__, args))
+		print(func(*args))
+	return log_func
 
-html_tag('h1')('My name is adel')
+def add(x, y, z):
+	return x + y + z
 
-#or
+def sub(x, y, z):
+	return x - y - z
 
-print_h1 = html_tag('h1')
-print_h1('This is my message')
+add_logger = logger(add)
+sub_logger = logger(sub)
 
-html_tag('b')("This is such a long text This is such a long textThis is such a long textThis is such a long textThis is such a long textThis is such a long textThis is such a long textThis is such a long textThis is such a long textThis is such a long text")
+add_logger(1,2,3)
+
+print(add_logger)
+
+
+
+
+
+
