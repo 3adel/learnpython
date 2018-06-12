@@ -1,18 +1,16 @@
-#decorator functions allows us to easily add functionality to our existing function by adding it inside our wrapper
+def my_logger(orig_func):
+	import logging
+	logging.basicConfig(filename='{}.log'.format(orig_func.__name__), level=logging.INFO)
 
-def decorator_function(original_function):
-	def wrapper_function(*args):
-		print('---> extra functionality in wrapper function ran')
-		return original_function(*args)
-	return wrapper_function
+	def wrapper(*args, **kwargs):
+		logging.info('Ran with args: {}, and kwargs: {}'.format(args, kwargs))
+		return orig_func(*args, **kwargs)
 
-@decorator_function
-def display():
-	print('---> display function ran')
+	return wrapper
 
-@decorator_function
+
+@my_logger
 def display_info(name, age):
 	print('---> display_info ran with arguments ({}, {})'.format(name, age))
 
 display_info('John', 25)
-display()
