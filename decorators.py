@@ -1,5 +1,4 @@
-
-#this decorator can be used for any new function as a logger
+#a decorator function to log functions when they run
 def my_logger(orig_func):
 	import logging
 	logging.basicConfig(filename='{}.log'.format(orig_func.__name__), level=logging.INFO)
@@ -10,15 +9,28 @@ def my_logger(orig_func):
 
 	return wrapper
 
+#a decorator function to time how long functions take to run
+import time
+def my_timer(orig_func):
+	 
 
-@my_logger
+	def wrapper(*args, **kwargs):
+		t1 = time.time()
+		result = orig_func(*args, **kwargs)
+		t2 = time.time() - t1
+
+		print('{} ran in: {} sec'.format(orig_func.__name__, t2))
+		return result
+
+	return wrapper
+
+
+
+
+@my_timer
 def display_info(name, age):
-	print('---> display_info ran with arguments ({}, {})'.format(name, age))
+	time.sleep(1)
+	print('display_info ran with arguments ({}, {})'.format(name, age))
 
-@my_logger
-def add_numbers(x, y):
-	print('---> add_numbes ran with arguments ({}, {})'.format(x, y))
-	return x + y
 
-display_info('John', 25)
-add_numbers(1, 2)
+display_info('Sami', '37')
