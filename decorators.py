@@ -11,9 +11,8 @@ def my_logger(orig_func):
 
 #a decorator function to time how long functions take to run
 import time
-def my_timer(orig_func):
-	 
 
+def my_timer(orig_func):
 	def wrapper(*args, **kwargs):
 		t1 = time.time()
 		result = orig_func(*args, **kwargs)
@@ -21,12 +20,12 @@ def my_timer(orig_func):
 
 		print('{} ran in: {} sec'.format(orig_func.__name__, t2))
 		return result
-
+	
 	return wrapper
 
 
-
-
+#you can stack decorators
+@my_logger
 @my_timer
 def display_info(name, age):
 	time.sleep(1)
