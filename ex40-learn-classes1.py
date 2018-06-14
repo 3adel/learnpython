@@ -25,15 +25,26 @@ class Employee:
 	def set_raise_amount(cls, amount):
 		cls.raise_amount = amount
 
+	#alternative constructor
+	@classmethod
+	def from_string(cls, emp_str):
+		first, last, pay = emp_str.split('-')
+		return cls(first, last, pay)
+		 
+
+
+
 
 emp_1 = Employee('Corey', 'Schafer', 50000)
 emp_2 = Employee('Test', 'User', 60000)
 
-#set a class variable through a class method. It's equal to saying
-#Employee.raise_amount = 1.1
-#You can also run class methods from instances, but nobody does it
-#emp_1.set_raise_amount(1.1)
-Employee.set_raise_amount(1.1)
+emp_str_1 = 'John-Doe-70000'
+emp_str_2 = 'Steve-Smith-30000'
+emp_str_3 = 'Jane-Doe-90000'
+
+new_emp_1 = Employee.from_string(emp_str_1)
+
+print(new_emp_1.email, new_emp_1.pay, new_emp_1.first)
 
 
 #raise amount before calling the class method
