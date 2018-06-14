@@ -30,27 +30,26 @@ class Employee:
 	def from_string(cls, emp_str):
 		first, last, pay = emp_str.split('-')
 		return cls(first, last, pay)
-		 
 
+	#static methods are created because they have some sort of logical connection with the class, but they don't take self or class as arguments
+	#static methods don't operate on the instance or the class
+	@staticmethod
+	def is_workday(day):
+		if day.weekday() == 5 or day.weekday() == 6:
+			return False
+		return True
+	
 
+import datetime
+my_date = datetime.date(2016, 8, 10)
+
+print(Employee.is_workday(my_date))
 
 
 emp_1 = Employee('Corey', 'Schafer', 50000)
 emp_2 = Employee('Test', 'User', 60000)
 
-emp_str_1 = 'John-Doe-70000'
-emp_str_2 = 'Steve-Smith-30000'
-emp_str_3 = 'Jane-Doe-90000'
 
-new_emp_1 = Employee.from_string(emp_str_1)
-
-print(new_emp_1.email, new_emp_1.pay, new_emp_1.first)
-
-
-#raise amount before calling the class method
-print(Employee.raise_amount)
-print(emp_1.raise_amount)
-print(emp_2.raise_amount)
 
 
 
