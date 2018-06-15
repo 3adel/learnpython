@@ -55,9 +55,7 @@ dev_2 = Developer('Adel', 'Shehadeh', 120000, 'java')
 
 mgr_1 = Manager('Sue', 'Smith', 90000, [dev_1])
 
-print('--> Manager Email',mgr_1.email)
-print(mgr_1.print_emp())
-mgr_1.add_emp(dev_2)
-print(mgr_1.print_emp())
+print(isinstance(mgr_1, Developer))
+print(issubclass(Manager, Developer))
 
 
