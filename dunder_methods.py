@@ -22,6 +22,14 @@ class Employee:
 	def __str__(self):
 		return '{} - {}'.format(self.fullname(), self.email)
 
+	#a contrived example, when adding two employees objects, add their salaries instead
+	def __add__(self, other):
+		return self.pay + other.pay
+
+	# a contrived example to override the dunder function __len__()
+	def __len__(self):
+		return len(self.fullname())
+
 
 
 emp_1 = Employee('Corey', 'Schafer', 50000)
@@ -38,5 +46,15 @@ print(emp_1.__str__())
 print(emp_1.__repr__())
 
 
- 
+#__add__() dunder method
+print(1 + 2)
+print(int.__add__(1, 2))
+
+#a contrived example, when adding two employees objects, add their salaries instead
+print(emp_1 + emp_2)
+
+#
+print(len(emp_1))
+
+
 
