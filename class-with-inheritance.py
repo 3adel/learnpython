@@ -1,35 +1,22 @@
-class Human: 
-	def __init__(self, first_name, last_name):
-		self.first_name = first_name
-		self.last_name = last_name
+#composition example
+class Salary: 
+	def __init__(self, pay):
+		self.pay = pay
 
-	def get_name(self):
-		return self.first_name + ' ' + self.last_name
-
-	def test(self):
-		return "Test Method Human"
-
-class Employee(Human):
-	
-	def __init__(self, first_name, last_name, employee_no):
-
-		#using super to save rewriting code
-		super().__init__(first_name, last_name)
-		self.employee_no = employee_no
-
-	def get_info(self):
-		#reusing superclass methods
-		return super().get_name() + ', ' + str(self.employee_no)
-
-	#overriding superclass method
-	def test(self):
-		return "Test Method Employee"
-
-obj_human = Human("Adel", "Shehadeh")
-print(obj_human.get_name())
-
-obj_employee = Employee("Samer", "Mahmoud", 47394739)
+	def get_total(self):
+		return self.pay*12
 
 
-print(obj_employee.__dict__) 
-print(obj_employee.get_info())
+class Employee:
+	def __init__(self, pay, bonus):
+		self.pay = pay
+		self.bonus = bonus
+		self.obj_salary = Salary(self.pay)
+
+	def annual_salary(self):
+		return self.obj_salary.get_total() + self.bonus
+
+obj_emp = Employee(100, 10)
+print(obj_emp.annual_salary())
+
+#This is a simple example of composition. A Salary cannot exist on its own. You need an employee to be able to have a salary. If we destroy the employee, the salary will be also destroyed. So a asalary is tightly coupled to an employee
