@@ -11,6 +11,7 @@ class Employee:
 	def __init__(self, pay, bonus):
 		self.pay = pay
 		self.bonus = bonus
+		#we are saying here that an Employee has a salary.
 		self.obj_salary = Salary(self.pay)
 
 	def annual_salary(self):
