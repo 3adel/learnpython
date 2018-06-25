@@ -11,7 +11,7 @@ class Dog(Animal):
 
 #Cat is-a Animal
 class Cat(Animal):
-	def __ini__(self, name):
+	def __init__(self, name):
 		#Cat has-a name
 		self.name = name
 
@@ -35,7 +35,46 @@ class Employee(Person):
 
 
 
-emp1 = Employee('adel',True, 434343)
-print(emp1.__dict__)
 
+
+#Fish is an object
+class Fish(object):
+	pass
+
+#Salmon is a Fish
+class Salmon(Fish):
+	pass
+
+#Hailbut is a Fish
+class Halibut(Fish):
+	pass
+
+#rover is a dog
+rover = Dog('Rover')
+
+#satan is a Cat
+satan = Cat('Satan')
+
+#mary is a person
+mary =Person('Mary', None)
+
+#mary has a pet named satan
+mary.pet = satan
+
+print(mary.pet.__dict__)
+
+#frank is an employee with no pets and with a salary of 434343
+frank = Employee('Frank',None, 434343)
+#frank has a pet named rover
+frank.pet = rover
+
+
+#flipper is a fish
+flipper = Fish()
+
+#crouse is a Salmon
+crouse = Salmon()
+
+#harry is Halibut
+harry =  Halibut()
 
