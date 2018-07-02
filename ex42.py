@@ -2,7 +2,7 @@
 class Animal(object):
 	def walk(self):
 		print('I am walking')
-	pass
+	
 
 #Dog is-a Animal
 class Dog(Animal):
@@ -12,6 +12,7 @@ class Dog(Animal):
 
 	def bark(self):
 		print("I am barking")
+		
 
 
 #Cat is-a Animal
@@ -22,18 +23,19 @@ class Cat(Animal):
 
 #a Person is an object
 class Person(object):
-	def __init__(self, name, pet):
+	def __init__(self, name, pet, kids):
 		#Person has-a name
 		self.name = name
 
 		#Person has a pet of some kind
 		self.pet = pet
+		self.kids = kids
 
 #Employee is a Person
 class Employee(Person):
-	def __init__(self, name, pet, salary):
+	def __init__(self, name, pet, kids, salary):
 		#using super helps us avoid repetition
-		super().__init__(name, pet)
+		super().__init__(name, pet, kids)
 
 		#Emplyee has a salary
 		self.salary = salary
@@ -54,39 +56,21 @@ class Salmon(Fish):
 class Halibut(Fish):
 	pass
 
-#rover is a dog
-rover = Dog('Rover')
+hoh_hof = Dog('Stinger')
 
-#satan is a Cat
-satan = Cat('Satan')
+emp1 = Employee('Rami', hoh_hof, ['Amal','Samir','Dali'], 50000)
 
-#mary is a person
-mary =Person('Mary', None)
+print(emp1.__dict__)
+print(emp1.name)
+print(emp1.pet.__dict__)
+print(emp1.kids)
+print(emp1.salary)
+print(emp1.pet.bark())
 
-#mary has a pet named satan
-mary.pet = satan
-
-print(mary.pet.__dict__)
-
-#frank is an employee with no pets and with a salary of 434343
-frank = Employee('Frank',None, 434343)
-#frank has a pet named rover
-frank.pet = rover
-
-
-#flipper is a fish
-flipper = Fish()
-
-#crouse is a Salmon
-crouse = Salmon()
-
-#harry is Halibut
-harry =  Halibut()
-
-myAnimal = Animal()
-myAnimal.walk()
-
-myDog = Dog('Sami')
-myDog.walk()
-myDog.bark()
+#add children 
+emp1.kids.append('Mahmoud')
+print(emp1.kids)
+k = emp1.kids.pop()
+print(emp1.kids)
+print(k)
 
