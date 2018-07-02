@@ -35,7 +35,7 @@ class Person(object):
 class Employee(Person):
 	def __init__(self, name, pet, kids, salary):
 		#using super helps us avoid repetition
-		super().__init__(name, pet, kids)
+		super(Employee, self).__init__(name, pet, kids)
 
 		#Emplyee has a salary
 		self.salary = salary
@@ -71,6 +71,4 @@ print(emp1.pet.bark())
 emp1.kids.append('Mahmoud')
 print(emp1.kids)
 k = emp1.kids.pop()
-print(emp1.kids)
-print(k)
 
