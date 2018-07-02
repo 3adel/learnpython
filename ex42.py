@@ -1,5 +1,7 @@
 #animal is an object
 class Animal(object):
+	def walk(self):
+		print('I am walking')
 	pass
 
 #Dog is-a Animal
@@ -7,6 +9,9 @@ class Dog(Animal):
 	def __init__(self, name):
 		#Dog has-a name
 		self.name = name
+
+	def bark(self):
+		print("I am barking")
 
 
 #Cat is-a Animal
@@ -77,4 +82,11 @@ crouse = Salmon()
 
 #harry is Halibut
 harry =  Halibut()
+
+myAnimal = Animal()
+myAnimal.walk()
+
+myDog = Dog('Sami')
+myDog.walk()
+myDog.bark()
 
