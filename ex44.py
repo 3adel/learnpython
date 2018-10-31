@@ -1,23 +1,21 @@
-#implicit inheritence
-
+#explicit override
 class Parent(object):
 
-	def __init__(self, name):
-		self.name = name
+	def override(self):
+		print("PARENT override()")
 
-	def implicit(self):
-		print("Parent implicit()")
 
 class Child(Parent):
-	pass
+	
+	#explicit override
+	def override(self):
+		print("CHILD override()")
 
 
-dad = Parent('Ahmed')
-son = Child('Sami')
+dad = Parent()
+son = Child()
 
-dad.implicit()
-son.implicit()
 
-print(dad.name)
-print(son.name)
+dad.override()
+son.override()
 
