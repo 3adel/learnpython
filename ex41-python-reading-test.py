@@ -20,6 +20,7 @@ PHRASES = {
       "From *** get the *** attribute and set it to '***'."
 }
 
+
 # do they want to drill phrases first
 if len(sys.argv) == 2 and sys.argv[1] == "english":
     PHRASE_FIRST = True
@@ -64,10 +65,16 @@ def convert(snippet, phrase):
     return results
 
 
+
+
+
+
+
 # keep going until they hit CTRL-D
 try:
     while True:
         snippets = list(PHRASES.keys())
+        
         random.shuffle(snippets)
 
         for snippet in snippets:
