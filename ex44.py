@@ -1,21 +1,20 @@
-#explicit override
 class Parent(object):
 
-	def override(self):
-		print("PARENT override()")
-
+	def altered(self):
+		print("PARENT altered()")
 
 class Child(Parent):
-	
-	#explicit override
-	def override(self):
-		print("CHILD override()")
+
+	def altered(self):
+		print("CHILD, BEFORE PARENT is altered()")
+		super(Child, self).altered()
+		print("CHILD, AFTER PARENT is altered()")
+
+
 
 
 dad = Parent()
 son = Child()
 
-
-dad.override()
-son.override()
-
+dad.altered()
+son.altered()
