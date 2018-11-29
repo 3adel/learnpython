@@ -1,6 +1,6 @@
 
 from nose.tools import *
-import NAME
+import myproject
 
 
 def setup():
