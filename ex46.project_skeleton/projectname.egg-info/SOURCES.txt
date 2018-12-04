@@ -1,0 +1,9 @@
+README.txt
+setup.py
+bin/myscript.py
+myproject/__init__.py
+projectname.egg-info/PKG-INFO
+projectname.egg-info/SOURCES.txt
+projectname.egg-info/dependency_links.txt
+projectname.egg-info/requires.txt
+projectname.egg-info/top_level.txt
