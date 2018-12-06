@@ -11,9 +11,9 @@ config = {
 	'author_email': 'adel.sh@gmail.com',
 	'version': '0.1',
 	'install_requires': ['nose'],
-	'packages': ['myproject'],
+	'packages': ['ex47'],
 	'scripts': [],
-	'name': 'projectname'
+	'name': 'ex47'
 }
 
 setup(**config)
