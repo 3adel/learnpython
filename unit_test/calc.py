@@ -11,3 +11,6 @@ def multiply(x, y):
 def divide(x, y):
 	return x / y
 
+
+print(divide(5,2))
+
