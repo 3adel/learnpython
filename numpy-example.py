@@ -27,5 +27,8 @@ r = np.linalg.solve(A, s)
 print(f"The solution of the equation is\n{r}")
 
 
+#what if we want to find the determinant of a linearly dependent matrix 
 
+b = [[1, 1, 3],[1,2,4],[2,3,7]]
+print(np.linalg.det(b))
 
